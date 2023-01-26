@@ -38,6 +38,7 @@
         <lang.foldingBuilder language="XML" implementationClass="dev.zbinski.htmlattributefolder.AttributeFolder"/>
         <lang.foldingBuilder language="HTML" implementationClass="dev.zbinski.htmlattributefolder.AttributeFolder"/>
         <lang.foldingBuilder language="XHTML" implementationClass="dev.zbinski.htmlattributefolder.AttributeFolder"/>
+        <lang.foldingBuilder language="VUE" implementationClass="dev.zbinski.htmlattributefolder.AttributeFolder"/>
 
         <projectConfigurable parentId="tools"
                              nonDefaultProject="true"
