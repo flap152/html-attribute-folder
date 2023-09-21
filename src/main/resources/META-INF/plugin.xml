@@ -41,7 +41,13 @@
         <lang.foldingBuilder language="VUE" implementationClass="dev.zbinski.htmlattributefolder.AttributeFolder"/>
         <lang.foldingBuilder language="JSX" implementationClass="dev.zbinski.htmlattributefolder.AttributeFolder"/>
         <lang.foldingBuilder language="TSX" implementationClass="dev.zbinski.htmlattributefolder.AttributeFolder"/>
-        <lang.foldingBuilder language="SVELTE" implementationClass="dev.zbinski.htmlattributefolder.AttributeFolder"/>
+        <lang.foldingBuilder language="PHP" implementationClass="dev.zbinski.htmlattributefolder.AttributeFolder"/>
+
+
+<!--        <lang.foldingBuilder implementationClass="dev.zbinski.htmlattributefolder.AttributeFolder"/>-->
+
+
+
 
         <projectConfigurable parentId="tools"
                              nonDefaultProject="true"
@@ -49,4 +55,19 @@
                              id="dev.zbinski.htmlattributefolder.AttributeFolderSettings"
                              instance="dev.zbinski.htmlattributefolder.AttributeFolderSettings"/>
     </extensions>
+<!--    <extensionPoints>-->
+<!--        <extensionPoint name="lang.myFoldingBuilder" beanClass="com.intellij.lang.LanguageExtensionPoint" dynamic="true">-->
+<!--            <with attribute="implementationClass" implements="com.intellij.lang.folding.FoldingBuilder"/>-->
+<!--        </extensionPoint>-->
+<!--        <extensionPoint-->
+<!--                name="myDynamicExtensionPoint"-->
+<!--                beanClass="dev.zbinski.htmlattributefolder.MyExtensionPointClass"-->
+<!--                dynamic="true"/>-->
+<!--    </extensionPoints>-->
+
+<!--    <projectListeners>-->
+<!--        <listener-->
+<!--                class="dev.zbinski.htmlattributefolder.MyToolWindowListener"-->
+<!--                topic="com.intellij.openapi.wm.ex.ToolWindowManagerListener"/>-->
+<!--    </projectListeners>-->
 </idea-plugin>

@@ -29,6 +29,7 @@ class AttributeFolderState : PersistentStateComponent<AttributeFolderState> {
     var placeholder = "..."
     var collapseByDefault = true
     var attributes = ArrayList<String>()
+    var languages = ArrayList<String>()
 
     override fun getState(): AttributeFolderState {
         return this

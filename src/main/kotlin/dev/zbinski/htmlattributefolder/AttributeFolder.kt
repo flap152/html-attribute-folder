@@ -15,6 +15,8 @@ import com.intellij.lang.folding.FoldingDescriptor
 class AttributeFolder: FoldingBuilderEx(), DumbAware {
     private val settings = AttributeFolderState.instance
 
+
+
     override fun buildFoldRegions(root: PsiElement, document: Document, quick: Boolean): Array<FoldingDescriptor> = runBlocking {
         val descriptors = ArrayList<FoldingDescriptor>()
         for (item in getAttributes(Array(1) { root })) {

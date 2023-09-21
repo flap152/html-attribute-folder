@@ -30,7 +30,8 @@ tasks {
 
     patchPluginXml {
         sinceBuild.set("213")
-        untilBuild.set("223.*")
+        //untilBuild.set("223.*")
+//        untilBuild.set("232.*")
     }
 
     signPlugin {
@@ -47,6 +48,9 @@ tasks {
     runIde {
         // Absolute path to the installed targetIDE to use as IDE Development
         // Instance (the "Contents" directory is macOS specific):
-        ideDir.set(file("/Users/zbinski/Library/Application Support/JetBrains/Toolbox/apps/PhpStorm/ch-0/222.3739.61/PhpStorm.app/Contents"))
+        //ideDir.set(file("/Users/zbinski/Library/Application Support/JetBrains/Toolbox/apps/PhpStorm/ch-0/222.3739.61/PhpStorm.app/Contents"))
+        //ideDir.set(file("C:\\Program Files\\JetBrains\\PhpStorm 2021.2.2"))
+        //ideDir.set(("C:\\Program Files\\JetBrains\\PhpStorm 2021.2.2"))
+        ideDir.set(file("/../../../../Program Files/JetBrains/PhpStorm 2021.2.2"))
     }
 }

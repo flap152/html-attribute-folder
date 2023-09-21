@@ -11,6 +11,7 @@ import com.intellij.ui.components.JBTextField
 class AttributeFolderComponent {
     val panel: JPanel
     private val attributesInput = JBTextField()
+    private val languagesInput = JBTextField()
     private val placeholderInput = JBTextField()
     private val collapseByDefaultInput = JBCheckBox()
     private val foldingMethodMenu = ComboBox(arrayOf(
@@ -21,6 +22,12 @@ class AttributeFolderComponent {
     init {
         foldingMethodMenu.setMinimumAndPreferredWidth(250)
         panel = FormBuilder.createFormBuilder()
+            .addLabeledComponent(
+                JBLabel("List of languages to process (separated by comma)"),
+                languagesInput,
+                1,
+                false
+            )
             .addLabeledComponent(
                 JBLabel("List of attributes to fold (separated by comma)"),
                 attributesInput,
@@ -57,6 +64,12 @@ class AttributeFolderComponent {
         get() = attributesInput.text
         set(newText) {
             attributesInput.text = newText
+        }
+
+    var languages: String
+        get() = languagesInput.text
+        set(newText) {
+            languagesInput.text = newText
         }
 
     var placeholder: String

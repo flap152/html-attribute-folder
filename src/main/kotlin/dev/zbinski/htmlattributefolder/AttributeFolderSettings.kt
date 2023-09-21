@@ -22,8 +22,10 @@ class AttributeFolderSettings(): Configurable {
     override fun isModified(): Boolean {
         val settings = AttributeFolderState.instance
         val attributes = settingsComponent?.attributes?.split(',') ?: ArrayList()
+        val languages = settingsComponent?.languages?.split(',') ?: ArrayList()
 
         return !compareLists(attributes, settings.attributes)
+                || !compareLists(languages, settings.languages)
                 || settingsComponent?.placeholder != settings.placeholder
                 || settingsComponent?.foldingMethod != settings.foldingMethod
                 || settingsComponent?.collapseByDefault != settings.collapseByDefault
@@ -37,6 +39,9 @@ class AttributeFolderSettings(): Configurable {
         settings.attributes = ArrayList(
             settingsComponent?.attributes?.split(',') ?: ArrayList()
         )
+        settings.languages = ArrayList(
+            settingsComponent?.languages?.split(',') ?: ArrayList()
+        )
     }
 
     override fun reset() {
@@ -45,6 +50,7 @@ class AttributeFolderSettings(): Configurable {
         settingsComponent?.foldingMethod = settings.foldingMethod
         settingsComponent?.collapseByDefault = settings.collapseByDefault
         settingsComponent?.attributes = settings.attributes.joinToString(",")
+        settingsComponent?.languages = settings.languages.joinToString(",")
     }
 
     override fun disposeUIResources() {
@@ -54,4 +60,6 @@ class AttributeFolderSettings(): Configurable {
     private fun compareLists(list1: List<String>, list2: List<String>): Boolean {
         return list1.size == list2.size && list1.toSet() == list2.toSet()
     }
+
+
 }
